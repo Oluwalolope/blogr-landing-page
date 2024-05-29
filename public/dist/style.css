@@ -1,0 +1,54 @@
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  padding-top: 2rem;
+  color: white;
+}
+
+p {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+header {
+  padding: 1rem 2rem 0 2rem;
+  background-color: red;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+nav .nav--items {
+  display: flex;
+  flex: 2;
+  flex-direction: row;
+  justify-content: space-between;
+}
+nav .nav--items .call-to-action {
+  align-self: flex-end;
+  gap: 2rem;
+}
+nav .nav--items .call-to-action a {
+  margin-left: 8px;
+}
+nav .nav--headings {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+nav .nav--headings div::after {
+  content: url(../assets/images/icon-arrow-light.svg);
+  display: inline-block;
+  width: auto;
+  margin-left: 8px;
+}
+
+.priority--cta {
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border-radius: 12px;
+}
