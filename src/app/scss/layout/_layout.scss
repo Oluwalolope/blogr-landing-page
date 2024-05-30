@@ -1,3 +1,5 @@
+@use '../base/globals' as *;
+
 header {
     padding: 1rem 2rem 0 2rem;;
     background-color: red;
@@ -8,7 +10,7 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: var(--gap-large);
     
     .nav--items {
         display: flex;
@@ -18,8 +20,8 @@ nav {
         
         .call-to-action {
             align-self: flex-end;
-            gap: 2rem;
-
+            gap: var(--gap-large);
+            
             a {
                 margin-left: 8px;
             }
@@ -28,7 +30,7 @@ nav {
     .nav--headings {
         display: flex;
         flex-direction: row;
-        gap: 2rem;
+        gap: var(--gap-large);
 
         div::after {
             content: url(../assets/images/icon-arrow-light.svg);

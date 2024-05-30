@@ -1,5 +1,7 @@
+@use '../base/globals' as *;
+
 .priority--cta {
     padding: .5rem 1rem;
-    background-color: white;
-    border-radius: 12px;
+    background-color: var(--clr-white);
+    border-radius: var(--br-cta);
 }
