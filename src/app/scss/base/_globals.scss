@@ -16,9 +16,10 @@
     --bg-clr-very-dark-desaturated-blue: hsl(237, 23%, 32%);
 
     //font size
-    --fs-h1: clamp(1.75rem, 1.6071rem + 0.7143vw, 2.275rem);
+    --fs-h1: clamp(1.75rem, 1.5rem + 1.25vw, 2.625rem);
     --fs-h2: clamp(1.25rem, 1.429rem + 0.5357vw, 1.625rem);
-    --fs-p: clamp(0.9375rem, 0.8661rem + 0.3571vw, 1.1875rem);
+    --fs-h3: clamp(1.125rem, 1.0536rem + 0.3571vw, 1.375rem);
+    --fs-p: clamp(0.875rem, 0.8393rem + 0.1786vw, 1rem);
 
     // font family
     --ff-main: 'Overpass', sans-serif;
@@ -35,10 +36,14 @@
     --gap-small: 1rem;
     --gap-medium: 1.5rem;
     --gap-large: 2rem;
+    --gap-v-large: 4rem;
 
     //border
     --br-cta: 18px;
     --br-section: 5% 15%;
+
+    //transition
+    --transition: ease-in .1s;
 }
 
 *{

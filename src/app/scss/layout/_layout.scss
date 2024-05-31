@@ -1,7 +1,7 @@
 @use '../base/globals' as *;
 
 header {
-    padding: 1rem 2rem 0 2rem;
+    padding: var(--gap-medium) var(--gap-v-large);
     border-bottom-left-radius: var(--br-section);
     background-color: var(--clr-light-red);
     background-image: url(../assets/images/bg-pattern-intro-desktop.svg);
@@ -53,6 +53,33 @@ nav {
             display: inline-block;
             width: auto;
             margin-left: 8px;
+        }
+    }
+}
+main {
+    section {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        padding-left: var(--gap-v-large);
+        gap: var(--gap-small);
+
+        img {
+            flex: 1;
+            width: 250px;
+            aspect-ratio: 1;
+        }
+        div {
+            flex: 1;
+        }
+
+        &:is(.reverse){
+            padding-inline: var(--gap-v-large);
+            flex-direction: row;
+            background-image: var(--gradient-2);
+            border-top-right-radius: var(--br-section);
+            border-bottom-left-radius: var(--br-section);
         }
     }
 }

@@ -3,17 +3,47 @@
 h1 {
     font-size: var(--fs-h1);
     font-family: var(--ff-main);
-    font-weight: var(--fw-main-medium);
+    font-weight: var(--fw-main-light);
     text-align: center;
-    padding-top: 2rem;
+    padding-top: var(--gap-v-large);
     color: var(--clr-white);
+}
+h2 {
+    font-size: var(--fs-h2);
+    font-family: var(--ff-main);
+    font-weight: var(--fw-body-medium);
+    text-align: center;
+    padding-top: var(--gap-v-large);
+    color: var(--clr-dark-blue);
+}
+h3 {
+    font-size: var(--fs-h3);
+    font-family: var(--ff-main);
+    font-weight: var(--fw-body-medium);
+    text-align: left;
+    padding-top: var(--gap-v-large);
+    color: var(--clr-dark-blue);
 }
 p {
     font-family: var(--ff-body);
     font-size: var(--fs-p);
     color: var(--clr-white);
     text-align: center;
-    padding-top: 1rem;
+    padding-top: var(--gap-small);
+}
+main{ 
+    p {
+    color: var(--clr-dark-blue);
+    text-align: left;
+    line-height: 1.32rem;
+    }
+    .reverse {
+        h2, p{
+            text-align: left;
+            color: var(--clr-white);
+        }
+    }
+    
 }
 .nav--headings {
     font-family: var(--ff-body);
@@ -22,6 +52,7 @@ p {
 
     div{
         &:hover {
+            transition: var(--transition);
             cursor: pointer;
             text-decoration: underline;
         }

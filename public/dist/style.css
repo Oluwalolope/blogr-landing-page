@@ -11,9 +11,10 @@
   --bg-clr-light-red: hsl(353, 100%, 62%);
   --bg-clr-very-dark-gray-blue: hsl(237, 17%, 21%);
   --bg-clr-very-dark-desaturated-blue: hsl(237, 23%, 32%);
-  --fs-h1: clamp(1.75rem, 1.6071rem + 0.7143vw, 2.275rem);
+  --fs-h1: clamp(1.75rem, 1.5rem + 1.25vw, 2.625rem);
   --fs-h2: clamp(1.25rem, 1.429rem + 0.5357vw, 1.625rem);
-  --fs-p: clamp(0.9375rem, 0.8661rem + 0.3571vw, 1.1875rem);
+  --fs-h3: clamp(1.125rem, 1.0536rem + 0.3571vw, 1.375rem);
+  --fs-p: clamp(0.875rem, 0.8393rem + 0.1786vw, 1rem);
   --ff-main: "Overpass", sans-serif;
   --ff-body: "Ubuntu", sans-serif;
   --fw-main-light: 300;
@@ -24,8 +25,10 @@
   --gap-small: 1rem;
   --gap-medium: 1.5rem;
   --gap-large: 2rem;
+  --gap-v-large: 4rem;
   --br-cta: 18px;
   --br-section: 5% 15%;
+  --transition: ease-in .1s;
 }
 
 * {
@@ -35,10 +38,28 @@
 h1 {
   font-size: var(--fs-h1);
   font-family: var(--ff-main);
-  font-weight: var(--fw-main-medium);
+  font-weight: var(--fw-main-light);
   text-align: center;
-  padding-top: 2rem;
+  padding-top: var(--gap-v-large);
   color: var(--clr-white);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  font-family: var(--ff-main);
+  font-weight: var(--fw-body-medium);
+  text-align: center;
+  padding-top: var(--gap-v-large);
+  color: var(--clr-dark-blue);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  font-family: var(--ff-main);
+  font-weight: var(--fw-body-medium);
+  text-align: left;
+  padding-top: var(--gap-v-large);
+  color: var(--clr-dark-blue);
 }
 
 p {
@@ -46,7 +67,17 @@ p {
   font-size: var(--fs-p);
   color: var(--clr-white);
   text-align: center;
-  padding-top: 1rem;
+  padding-top: var(--gap-small);
+}
+
+main p {
+  color: var(--clr-dark-blue);
+  text-align: left;
+  line-height: 1.32rem;
+}
+main .reverse h2, main .reverse p {
+  text-align: left;
+  color: var(--clr-white);
 }
 
 .nav--headings {
@@ -55,6 +86,7 @@ p {
   color: var(--clr-white);
 }
 .nav--headings div:hover {
+  transition: var(--transition);
   cursor: pointer;
   text-decoration: underline;
 }
@@ -71,7 +103,7 @@ a {
 }
 
 header {
-  padding: 1rem 2rem 0 2rem;
+  padding: var(--gap-medium) var(--gap-v-large);
   border-bottom-left-radius: var(--br-section);
   background-color: var(--clr-light-red);
   background-image: url(../assets/images/bg-pattern-intro-desktop.svg);
@@ -122,12 +154,37 @@ nav .nav--headings div::after {
   margin-left: 8px;
 }
 
+main section {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  padding-left: var(--gap-v-large);
+  gap: var(--gap-small);
+}
+main section img {
+  flex: 1;
+  width: 250px;
+  aspect-ratio: 1;
+}
+main section div {
+  flex: 1;
+}
+main section:is(.reverse) {
+  padding-inline: var(--gap-v-large);
+  flex-direction: row;
+  background-image: var(--gradient-2);
+  border-top-right-radius: var(--br-section);
+  border-bottom-left-radius: var(--br-section);
+}
+
 .priority--cta {
   padding: 0.5rem 1rem;
   background-color: var(--clr-white);
   border-radius: var(--br-cta);
 }
 .priority--cta:hover {
+  transition: var(--transition);
   background-color: var(--clr-very-light-red);
   color: var(--clr-white);
 }
@@ -138,6 +195,7 @@ nav .nav--headings div::after {
   border-radius: var(--br-cta);
 }
 .header--cta a:not(.priority--cta):hover {
+  transition: var(--transition);
   background-color: var(--clr-white);
   color: var(--clr-light-red);
 }

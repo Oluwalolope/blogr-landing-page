@@ -4,8 +4,9 @@
     padding: .5rem 1rem;
     background-color: var(--clr-white);
     border-radius: var(--br-cta);
-
+    
     &:hover {
+        transition: var(--transition);
         background-color: var(--clr-very-light-red);
         color: var(--clr-white);
     }
@@ -15,8 +16,9 @@
         padding: .5rem 1rem;
         border: 2px solid var(--clr-white);
         border-radius: var(--br-cta);
-
+        
         &:hover {
+            transition: var(--transition);
             background-color: var(--clr-white);
             color: var(--clr-light-red);
         }
