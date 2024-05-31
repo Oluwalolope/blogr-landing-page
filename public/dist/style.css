@@ -11,9 +11,9 @@
   --bg-clr-light-red: hsl(353, 100%, 62%);
   --bg-clr-very-dark-gray-blue: hsl(237, 17%, 21%);
   --bg-clr-very-dark-desaturated-blue: hsl(237, 23%, 32%);
-  --fs-h1: clamp(1.5rem, 1.3454rem + 0.7732vw, 1.875rem);
-  --fs-h2: clamp(1.25rem, 1.211rem + 0.6443vw, 1.5625rem);
-  --fs-p: clamp(0.9375rem, 0.8602rem + 0.3866vw, 1.125rem);
+  --fs-h1: clamp(1.75rem, 1.6071rem + 0.7143vw, 2.275rem);
+  --fs-h2: clamp(1.25rem, 1.429rem + 0.5357vw, 1.625rem);
+  --fs-p: clamp(0.9375rem, 0.8661rem + 0.3571vw, 1.1875rem);
   --ff-main: "Overpass", sans-serif;
   --ff-body: "Ubuntu", sans-serif;
   --fw-main-light: 300;
@@ -24,8 +24,12 @@
   --gap-small: 1rem;
   --gap-medium: 1.5rem;
   --gap-large: 2rem;
-  --br-cta: 12px;
-  --br-section: 45%;
+  --br-cta: 18px;
+  --br-section: 5% 15%;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 h1 {
@@ -45,19 +49,45 @@ p {
   padding-top: 1rem;
 }
 
+.nav--headings {
+  font-family: var(--ff-body);
+  font-size: var(--fs-p);
+  color: var(--clr-white);
+}
+.nav--headings div:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 a {
   font-family: var(--ff-body);
+  font-weight: var(--fw-body-medium);
   text-decoration: none;
   color: var(--clr-white);
 }
 
-.priority--cta a {
+.priority--cta {
   color: var(--clr-light-red);
 }
 
 header {
   padding: 1rem 2rem 0 2rem;
-  background-color: red;
+  border-bottom-left-radius: var(--br-section);
+  background-color: var(--clr-light-red);
+  background-image: url(../assets/images/bg-pattern-intro-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+header p {
+  padding-bottom: var(--gap-large);
+}
+header .header--cta {
+  padding-bottom: var(--gap-large);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-small);
 }
 
 nav {
@@ -96,4 +126,18 @@ nav .nav--headings div::after {
   padding: 0.5rem 1rem;
   background-color: var(--clr-white);
   border-radius: var(--br-cta);
+}
+.priority--cta:hover {
+  background-color: var(--clr-very-light-red);
+  color: var(--clr-white);
+}
+
+.header--cta a:not(.priority--cta) {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--clr-white);
+  border-radius: var(--br-cta);
+}
+.header--cta a:not(.priority--cta):hover {
+  background-color: var(--clr-white);
+  color: var(--clr-light-red);
 }

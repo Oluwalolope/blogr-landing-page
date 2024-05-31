@@ -15,11 +15,24 @@ p {
     text-align: center;
     padding-top: 1rem;
 }
+.nav--headings {
+    font-family: var(--ff-body);
+    font-size: var(--fs-p);
+    color: var(--clr-white);
+
+    div{
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+}
 a {
     font-family: var(--ff-body);
+    font-weight: var(--fw-body-medium);
     text-decoration: none;
     color: var(--clr-white);
 }
-.priority--cta a {
+.priority--cta {
     color: var(--clr-light-red);
 }
