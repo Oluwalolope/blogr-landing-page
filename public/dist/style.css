@@ -75,7 +75,7 @@ main p {
   text-align: left;
   line-height: 1.32rem;
 }
-main .reverse h2, main .reverse p {
+main .herobox--2 h2, main .herobox--2 p {
   text-align: left;
   color: var(--clr-white);
 }
@@ -100,6 +100,10 @@ a {
 
 .priority--cta {
   color: var(--clr-light-red);
+}
+
+footer {
+  color: var(--clr-grayish-blue);
 }
 
 header {
@@ -156,7 +160,7 @@ nav .nav--headings div::after {
 
 main section {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding-left: var(--gap-v-large);
@@ -170,12 +174,21 @@ main section img {
 main section div {
   flex: 1;
 }
-main section:is(.reverse) {
+main section:is(.herobox--1) {
   padding-inline: var(--gap-v-large);
-  flex-direction: row;
+  flex-direction: row-reverse;
+}
+main section:is(.herobox--2) {
   background-image: var(--gradient-2);
   border-top-right-radius: var(--br-section);
   border-bottom-left-radius: var(--br-section);
+}
+
+footer {
+  background-color: var(--bg-clr-very-dark-gray-blue);
+  border-top-right-radius: var(--br-section);
+  padding-inline: var(--gap-v-large);
+  padding-top: var(--gap-medium);
 }
 
 .priority--cta {

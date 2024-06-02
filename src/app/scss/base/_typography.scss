@@ -37,7 +37,7 @@ main{
     text-align: left;
     line-height: 1.32rem;
     }
-    .reverse {
+    .herobox--2 {
         h2, p{
             text-align: left;
             color: var(--clr-white);
@@ -66,4 +66,7 @@ a {
 }
 .priority--cta {
     color: var(--clr-light-red);
+}
+footer {
+    color: var(--clr-grayish-blue);
 }

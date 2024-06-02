@@ -59,7 +59,7 @@ nav {
 main {
     section {
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         padding-left: var(--gap-v-large);
@@ -74,12 +74,21 @@ main {
             flex: 1;
         }
 
-        &:is(.reverse){
+        &:is(.herobox--1){
             padding-inline: var(--gap-v-large);
-            flex-direction: row;
+            flex-direction: row-reverse;
+        }
+        
+        &:is(.herobox--2){
             background-image: var(--gradient-2);
             border-top-right-radius: var(--br-section);
             border-bottom-left-radius: var(--br-section);
         }
     }
+}
+footer {
+    background-color: var(--bg-clr-very-dark-gray-blue);
+    border-top-right-radius: var(--br-section);
+    padding-inline: var(--gap-v-large);
+    padding-top: var(--gap-medium);
 }
