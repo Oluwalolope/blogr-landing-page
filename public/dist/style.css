@@ -105,6 +105,9 @@ a {
 footer {
   color: var(--clr-grayish-blue);
 }
+footer h3 {
+  color: var(--clr-grayish-blue);
+}
 
 header {
   padding: var(--gap-medium) var(--gap-v-large);
@@ -189,6 +192,24 @@ footer {
   border-top-right-radius: var(--br-section);
   padding-inline: var(--gap-v-large);
   padding-top: var(--gap-medium);
+}
+footer .footer--wrapper {
+  width: min(100% - 2rem, 900px);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+footer .footer--wrapper section h3 {
+  padding-top: 0;
+  padding-bottom: var(--gap-medium);
+}
+footer .footer--wrapper section ul li:not(:first-child) {
+  padding-top: var(--gap-small);
+}
+footer .attribution {
+  padding-top: var(--gap-large);
+  text-align: center;
 }
 
 .priority--cta {

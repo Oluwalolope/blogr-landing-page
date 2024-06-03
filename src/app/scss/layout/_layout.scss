@@ -91,4 +91,30 @@ footer {
     border-top-right-radius: var(--br-section);
     padding-inline: var(--gap-v-large);
     padding-top: var(--gap-medium);
+
+    .footer--wrapper{
+        width: min(100% - 2rem, 900px);
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        section {
+            h3 {
+                padding-top: 0;
+                padding-bottom: var(--gap-medium);
+            }
+            ul{
+                li{
+                    &:not(:first-child){
+                        padding-top: var(--gap-small);
+                    }
+                }
+            }
+        }
+    }
+    .attribution {
+        padding-top: var(--gap-large);
+        text-align: center;
+    }
 }
