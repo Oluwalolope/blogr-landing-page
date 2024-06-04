@@ -108,6 +108,22 @@ footer {
 footer h3 {
   color: var(--clr-grayish-blue);
 }
+footer .footer--wrapper section ul li {
+  font-family: var(--ff-body);
+  font-weight: var(--fw-body-medium);
+  text-decoration: none;
+  color: var(--clr-grayish-blue);
+}
+footer .footer--wrapper section ul li:hover {
+  transition: var(--transition);
+  cursor: pointer;
+  text-decoration: underline;
+}
+footer .attribution a:hover {
+  transition: var(--transition);
+  cursor: pointer;
+  text-decoration: underline;
+}
 
 header {
   padding: var(--gap-medium) var(--gap-v-large);
@@ -149,6 +165,11 @@ nav .nav--items .call-to-action {
 nav .nav--items .call-to-action a {
   margin-left: 8px;
 }
+nav .nav--items .call-to-action a:not(.priority--cta):hover {
+  transition: var(--transition);
+  cursor: pointer;
+  text-decoration: underline;
+}
 nav .nav--headings {
   display: flex;
   flex-direction: row;
@@ -167,6 +188,7 @@ main section {
   justify-content: center;
   align-items: center;
   padding-left: var(--gap-v-large);
+  margin-bottom: var(--gap-medium);
   gap: var(--gap-small);
 }
 main section img {
@@ -185,6 +207,12 @@ main section:is(.herobox--2) {
   background-image: var(--gradient-2);
   border-top-right-radius: var(--br-section);
   border-bottom-left-radius: var(--br-section);
+}
+main section:is(.herobox--2) img {
+  background-image: url(../assets/images/bg-pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 footer {

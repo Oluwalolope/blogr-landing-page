@@ -40,6 +40,13 @@ nav {
             
             a {
                 margin-left: 8px;
+                &:not(.priority--cta){
+                    &:hover {
+                        transition: var(--transition);
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
             }
         }
     }
@@ -63,6 +70,7 @@ main {
         justify-content: center;
         align-items: center;
         padding-left: var(--gap-v-large);
+        margin-bottom: var(--gap-medium);
         gap: var(--gap-small);
 
         img {
@@ -83,6 +91,13 @@ main {
             background-image: var(--gradient-2);
             border-top-right-radius: var(--br-section);
             border-bottom-left-radius: var(--br-section);
+
+            img {
+                background-image: url(../assets/images/bg-pattern-circles.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
         }
     }
 }

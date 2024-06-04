@@ -73,4 +73,32 @@ footer {
     h3{
         color: var(--clr-grayish-blue);
     }
+    .footer--wrapper{
+        section {
+            ul {
+                li{
+                    font-family: var(--ff-body);
+                    font-weight: var(--fw-body-medium);
+                    text-decoration: none;
+                    color: var(--clr-grayish-blue);
+
+                   &:hover {
+                        transition: var(--transition);
+                        cursor: pointer;
+                        text-decoration: underline;
+                    } 
+                }
+            }
+        }
+    }
+    .attribution {
+        a {
+            &:hover {
+             transition: var(--transition);
+             cursor: pointer;
+             text-decoration: underline;
+            } 
+
+        }
+    }
 }
