@@ -20,7 +20,7 @@ h3 {
     font-size: var(--fs-h3);
     font-family: var(--ff-main);
     font-weight: var(--fw-body-medium);
-    text-align: left;
+    text-align: center;
     padding-top: var(--gap-v-large);
     color: var(--clr-dark-blue);
 }
@@ -31,15 +31,21 @@ p {
     text-align: center;
     padding-top: var(--gap-small);
 }
+.header--cta{
+    a{
+        font-family: var(--ff-body);
+        font-size: calc( var(--fs-p) * 0.8);
+        text-wrap: nowrap;
+        text-align: center;
+    }
+}
 main{ 
     p {
     color: var(--clr-dark-blue);
-    text-align: left;
     line-height: 1.32rem;
     }
     .herobox--2 {
         h2, p{
-            text-align: left;
             color: var(--clr-white);
         }
     }
@@ -71,7 +77,7 @@ footer {
     color: var(--clr-grayish-blue);
     
     h3{
-        color: var(--clr-grayish-blue);
+        color: var(--clr-white);
     }
     .footer--wrapper{
         section {
@@ -100,5 +106,24 @@ footer {
             } 
 
         }
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        p {
+        text-align: center;
+        }
+    }
+    .herobox--2 {
+        h2 {
+            text-align: left;
+        }
+    }
+    h3 {
+        text-align: left;
+    }
+    p {
+        text-align: left;
     }
 }

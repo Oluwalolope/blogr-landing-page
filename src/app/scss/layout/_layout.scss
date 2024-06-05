@@ -1,10 +1,10 @@
 @use '../base/globals' as *;
 
 header {
-    padding: var(--gap-medium) var(--gap-v-large);
-    border-bottom-left-radius: var(--br-section);
+    padding: var(--gap-medium) var(--gap-small);
+    border-bottom-left-radius: var(--br-section-mobile);
     background-color: var(--clr-light-red);
-    background-image: url(../assets/images/bg-pattern-intro-desktop.svg);
+    background-image: url(../assets/images/bg-pattern-intro-mobile.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -66,16 +66,18 @@ nav {
 main {
     section {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-left: var(--gap-v-large);
+        // padding-left: var(--gap-v-large);
+        padding-inline: var(--gap-small);
         margin-bottom: var(--gap-medium);
         gap: var(--gap-small);
 
         img {
             flex: 1;
-            width: 250px;
+            width: 80vw;
+            max-width: 250px;
             aspect-ratio: 1;
         }
         div {
@@ -83,14 +85,14 @@ main {
         }
 
         &:is(.herobox--1){
-            padding-inline: var(--gap-v-large);
-            flex-direction: row-reverse;
+            flex-direction: column;
         }
         
         &:is(.herobox--2){
             background-image: var(--gradient-2);
-            border-top-right-radius: var(--br-section);
-            border-bottom-left-radius: var(--br-section);
+            border-top-right-radius: var(--br-section-mobile);
+            border-bottom-left-radius: var(--br-section-mobile);
+            padding-bottom: var(--gap-medium);
 
             img {
                 background-image: url(../assets/images/bg-pattern-circles.svg);
@@ -103,16 +105,17 @@ main {
 }
 footer {
     background-color: var(--bg-clr-very-dark-gray-blue);
-    border-top-right-radius: var(--br-section);
-    padding-inline: var(--gap-v-large);
+    border-top-right-radius: var(--br-section-mobile);
+    padding-inline: var(--gap-small);
     padding-top: var(--gap-medium);
 
     .footer--wrapper{
         width: min(100% - 2rem, 900px);
         display: flex;
-        flex-direction: row;
-        align-items: flex-start;
+        flex-direction: column;
+        align-items: center;
         justify-content: space-between;
+        gap: var(--gap-medium);
 
         section {
             h3 {
@@ -120,6 +123,8 @@ footer {
                 padding-bottom: var(--gap-medium);
             }
             ul{
+                text-align: center;
+
                 li{
                     &:not(:first-child){
                         padding-top: var(--gap-small);
@@ -131,5 +136,52 @@ footer {
     .attribution {
         padding-top: var(--gap-large);
         text-align: center;
+    }
+}
+
+// ========Desktop View=======
+@media (min-width: 768px) {
+    header {
+        padding: var(--gap-medium) var(--gap-v-large);
+        border-bottom-left-radius: var(--br-section-desktop);
+        background-image: url(../assets/images/bg-pattern-intro-desktop.svg);
+    }
+    main {
+        section {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding-left: var(--gap-v-large);
+            margin-bottom: var(--gap-medium);
+            gap: var(--gap-small);
+
+
+            &:is(.herobox--1){
+                padding-inline: var(--gap-v-large);
+                flex-direction: row-reverse;
+            }
+
+            &:is(.herobox--2){
+                background-image: var(--gradient-2);
+                border-top-right-radius: var(--br-section-desktop);
+                border-bottom-left-radius: var(--br-section-desktop);
+            }
+        }
+    }
+    footer{
+        border-top-right-radius: var(--br-section-desktop);
+        padding-inline: var(--gap-v-large);
+        .footer--wrapper {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 0;
+
+            section {
+                ul {
+                    text-align: left;
+                }
+            }
+        }
     }
 }
