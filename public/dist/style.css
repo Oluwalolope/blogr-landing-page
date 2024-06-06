@@ -214,7 +214,7 @@ main section {
 main section img {
   flex: 1;
   width: 80vw;
-  max-width: 250px;
+  max-width: 700px;
   aspect-ratio: 1;
 }
 main section div {
@@ -271,6 +271,9 @@ footer .attribution {
     border-bottom-left-radius: var(--br-section-desktop);
     background-image: url(../assets/images/bg-pattern-intro-desktop.svg);
   }
+  main {
+    overflow: hidden;
+  }
   main section {
     display: flex;
     flex-direction: row;
@@ -284,10 +287,19 @@ footer .attribution {
     padding-inline: var(--gap-v-large);
     flex-direction: row-reverse;
   }
+  main section:is(.herobox--1) img {
+    margin-right: calc(var(--gap-v-large) * -4);
+  }
   main section:is(.herobox--2) {
     background-image: var(--gradient-2);
     border-top-right-radius: var(--br-section-desktop);
     border-bottom-left-radius: var(--br-section-desktop);
+  }
+  main section:is(.herobox--3) {
+    padding-inline: var(--gap-v-large);
+  }
+  main section:is(.herobox--3) img {
+    margin-left: calc(var(--gap-v-large) * -4);
   }
   footer {
     border-top-right-radius: var(--br-section-desktop);

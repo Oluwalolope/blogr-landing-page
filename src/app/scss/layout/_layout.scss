@@ -76,7 +76,7 @@ main {
         img {
             flex: 1;
             width: 80vw;
-            max-width: 250px;
+            max-width: 700px;
             aspect-ratio: 1;
         }
         div {
@@ -146,6 +146,8 @@ footer {
         background-image: url(../assets/images/bg-pattern-intro-desktop.svg);
     }
     main {
+        overflow: hidden;
+
         section {
             display: flex;
             flex-direction: row;
@@ -159,12 +161,25 @@ footer {
             &:is(.herobox--1){
                 padding-inline: var(--gap-v-large);
                 flex-direction: row-reverse;
-            }
 
+                img {
+                    margin-right: calc( var(--gap-v-large) * -4 );
+                }
+            }
+            
             &:is(.herobox--2){
                 background-image: var(--gradient-2);
                 border-top-right-radius: var(--br-section-desktop);
                 border-bottom-left-radius: var(--br-section-desktop);
+            }
+            
+            &:is(.herobox--3){
+                padding-inline: var(--gap-v-large);
+                
+                
+                img {
+                    margin-left: calc( var(--gap-v-large) * -4 )
+                }
             }
         }
     }
