@@ -171,6 +171,11 @@ footer {
                 background-image: var(--gradient-2);
                 border-top-right-radius: var(--br-section-desktop);
                 border-bottom-left-radius: var(--br-section-desktop);
+                
+                img{
+                    margin-top: calc( var(--gap-large) * -1);
+                    margin-bottom: calc( var(--gap-large) * -1);
+                }
             }
             
             &:is(.herobox--3){

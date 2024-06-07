@@ -295,6 +295,10 @@ footer .attribution {
     border-top-right-radius: var(--br-section-desktop);
     border-bottom-left-radius: var(--br-section-desktop);
   }
+  main section:is(.herobox--2) img {
+    margin-top: calc(var(--gap-large) * -1);
+    margin-bottom: calc(var(--gap-large) * -1);
+  }
   main section:is(.herobox--3) {
     padding-inline: var(--gap-v-large);
   }
