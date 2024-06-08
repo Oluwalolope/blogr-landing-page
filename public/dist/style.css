@@ -213,7 +213,7 @@ main section {
 }
 main section img {
   flex: 1;
-  width: 80vw;
+  width: 90vw;
   max-width: 700px;
   aspect-ratio: 1;
 }
@@ -228,12 +228,14 @@ main section:is(.herobox--2) {
   border-top-right-radius: var(--br-section-mobile);
   border-bottom-left-radius: var(--br-section-mobile);
   padding-bottom: var(--gap-medium);
+  overflow: hidden;
 }
 main section:is(.herobox--2) img {
+  width: 100vw;
   background-image: url(../assets/images/bg-pattern-circles.svg);
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: center 100%;
+  background-size: 200vw;
 }
 
 footer {
@@ -296,8 +298,12 @@ footer .attribution {
     border-bottom-left-radius: var(--br-section-desktop);
   }
   main section:is(.herobox--2) img {
+    width: 90vw;
     margin-top: calc(var(--gap-large) * -1);
     margin-bottom: calc(var(--gap-large) * -1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
   main section:is(.herobox--3) {
     padding-inline: var(--gap-v-large);
