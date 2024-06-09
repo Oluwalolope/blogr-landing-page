@@ -38,6 +38,9 @@ p {
         text-wrap: nowrap;
         text-align: center;
     }
+    .priority--cta {
+        color: var(--clr-light-red);
+    }
 }
 main{ 
     p {
@@ -54,8 +57,8 @@ main{
 .nav--headings {
     font-family: var(--ff-body);
     font-size: var(--fs-p);
-    color: var(--clr-white);
-
+    color: var(--clr-dark-blue);
+    
     div{
         &:hover {
             transition: var(--transition);
@@ -64,14 +67,21 @@ main{
         }
     }
 }
+.nav--items {
+    .call-to-action {
+        a {
+            color: var(--clr-dark-blue);
+        }
+        .priority--cta {
+            color: var(--clr-white);
+        }
+    }
+}
 a {
     font-family: var(--ff-body);
     font-weight: var(--fw-body-medium);
     text-decoration: none;
     color: var(--clr-white);
-}
-.priority--cta {
-    color: var(--clr-light-red);
 }
 footer {
     color: var(--clr-grayish-blue);
@@ -113,6 +123,23 @@ footer {
     header {
         p {
         text-align: center;
+        }
+    }
+    .nav--headings {
+        color: var(--clr-white);
+    }
+    .nav--items {
+        .call-to-action {
+            a {
+                color: var(--clr-white);
+            }
+            .priority--cta {
+                color: var(--clr-light-red);
+
+                &:hover {
+                    color: var(--clr-white);
+                }
+            }
         }
     }
     .herobox--2 {

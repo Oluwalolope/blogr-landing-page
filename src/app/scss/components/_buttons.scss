@@ -24,3 +24,19 @@
         }
     }
 }
+.topnav--toggle {
+    // background: none;
+    // border: none;
+    // padding: 0;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+// =======Desktop View=======
+@media (min-width: 768px) {
+    .topnav--toggle {
+        display: none;
+    }
+}

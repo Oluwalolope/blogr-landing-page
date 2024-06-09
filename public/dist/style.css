@@ -77,6 +77,9 @@ p {
   text-wrap: nowrap;
   text-align: center;
 }
+.header--cta .priority--cta {
+  color: var(--clr-light-red);
+}
 
 main p {
   color: var(--clr-dark-blue);
@@ -89,7 +92,7 @@ main .herobox--2 h2, main .herobox--2 p {
 .nav--headings {
   font-family: var(--ff-body);
   font-size: var(--fs-p);
-  color: var(--clr-white);
+  color: var(--clr-dark-blue);
 }
 .nav--headings div:hover {
   transition: var(--transition);
@@ -97,15 +100,18 @@ main .herobox--2 h2, main .herobox--2 p {
   text-decoration: underline;
 }
 
+.nav--items .call-to-action a {
+  color: var(--clr-dark-blue);
+}
+.nav--items .call-to-action .priority--cta {
+  color: var(--clr-white);
+}
+
 a {
   font-family: var(--ff-body);
   font-weight: var(--fw-body-medium);
   text-decoration: none;
   color: var(--clr-white);
-}
-
-.priority--cta {
-  color: var(--clr-light-red);
 }
 
 footer {
@@ -134,6 +140,18 @@ footer .attribution a:hover {
 @media (min-width: 768px) {
   header p {
     text-align: center;
+  }
+  .nav--headings {
+    color: var(--clr-white);
+  }
+  .nav--items .call-to-action a {
+    color: var(--clr-white);
+  }
+  .nav--items .call-to-action .priority--cta {
+    color: var(--clr-light-red);
+  }
+  .nav--items .call-to-action .priority--cta:hover {
+    color: var(--clr-white);
   }
   .herobox--2 h2 {
     text-align: left;
@@ -175,24 +193,44 @@ nav {
 nav .nav--items {
   display: flex;
   flex: 2;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  background-color: var(--clr-white);
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-medium);
+  border-radius: 8px;
+}
+nav .nav--items .topnav--close {
+  align-self: flex-end;
+  margin-block-start: var(--gap-small);
+  margin-inline-end: var(--gap-small);
 }
 nav .nav--items .call-to-action {
-  align-self: flex-end;
+  padding-block: var(--gap-medium);
+  width: 100%;
+  text-align: center;
   gap: var(--gap-large);
 }
 nav .nav--items .call-to-action a {
-  margin-left: 8px;
+  display: block;
+  margin-inline: auto;
+}
+nav .nav--items .call-to-action a:not(.priority--cta) {
+  margin-bottom: var(--gap-small);
 }
 nav .nav--items .call-to-action a:not(.priority--cta):hover {
   transition: var(--transition);
   cursor: pointer;
   text-decoration: underline;
 }
+nav .nav--items .call-to-action .priority--cta {
+  background-image: var(--gradient-1);
+  width: -moz-fit-content;
+  width: fit-content;
+}
 nav .nav--headings {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: var(--gap-large);
 }
 nav .nav--headings div::after {
@@ -273,6 +311,49 @@ footer .attribution {
     border-bottom-left-radius: var(--br-section-desktop);
     background-image: url(../assets/images/bg-pattern-intro-desktop.svg);
   }
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-large);
+  }
+  nav .nav--items {
+    display: flex;
+    flex: 2;
+    flex-direction: row;
+    background-color: transparent;
+    justify-content: space-between;
+    border-radius: 0;
+  }
+  nav .nav--items .call-to-action {
+    align-self: flex-end;
+    width: auto;
+    gap: var(--gap-large);
+  }
+  nav .nav--items .call-to-action a {
+    margin-left: 8px;
+    display: inline-block;
+  }
+  nav .nav--items .call-to-action a:not(.priority--cta):hover {
+    transition: var(--transition);
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  nav .nav--items .call-to-action .priority--cta {
+    background-image: none;
+  }
+  nav .nav--headings {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-large);
+  }
+  nav .nav--headings div::after {
+    content: url(../assets/images/icon-arrow-light.svg);
+    display: inline-block;
+    width: auto;
+    margin-left: 8px;
+  }
   main {
     overflow: hidden;
   }
@@ -344,4 +425,14 @@ footer .attribution {
   transition: var(--transition);
   background-color: var(--clr-white);
   color: var(--clr-light-red);
+}
+
+.topnav--toggle:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .topnav--toggle {
+    display: none;
+  }
 }
