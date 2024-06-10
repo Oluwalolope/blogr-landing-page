@@ -184,15 +184,23 @@ header .header--cta {
 }
 
 nav {
+  position: relative;
+}
+nav .nav--wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: var(--gap-large);
 }
 nav .nav--items {
   display: flex;
   flex: 2;
+  position: absolute;
+  z-index: 2;
+  margin-block-start: var(--gap-medium);
+  padding-block-start: var(--gap-medium);
+  width: 100%;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   flex-direction: column;
   background-color: var(--clr-white);
   align-items: center;
@@ -231,6 +239,7 @@ nav .nav--items .call-to-action .priority--cta {
 nav .nav--headings {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--gap-large);
 }
 nav .nav--headings div::after {
@@ -313,6 +322,7 @@ footer .attribution {
   }
   nav {
     display: flex;
+    position: static;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -321,6 +331,10 @@ footer .attribution {
   nav .nav--items {
     display: flex;
     flex: 2;
+    position: static;
+    padding-block-start: 0;
+    margin-block-start: 0;
+    box-shadow: none;
     flex-direction: row;
     background-color: transparent;
     justify-content: space-between;
@@ -427,6 +441,11 @@ footer .attribution {
   color: var(--clr-light-red);
 }
 
+.topnav--toggle {
+  background: none;
+  border: none;
+  padding: 0;
+}
 .topnav--toggle:hover {
   cursor: pointer;
 }

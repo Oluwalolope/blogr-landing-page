@@ -22,15 +22,23 @@ header {
 }
 
 nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--gap-large);
+    position: relative;
     
+    .nav--wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
     .nav--items {
         display: flex;
         flex: 2;
+        position: absolute;
+        z-index: 2;
+        margin-block-start: var(--gap-medium);
+        padding-block-start: var(--gap-medium);
+        width: 100%;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
         flex-direction: column;
         background-color: var(--clr-white);
         align-items: center;
@@ -45,7 +53,6 @@ nav {
         }
 
         .call-to-action {
-            // align-self: flex-end;
             padding-block: var(--gap-medium);
             width: 100%;
             text-align: center;
@@ -74,6 +81,7 @@ nav {
     .nav--headings {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: var(--gap-large);
 
         div::after {
@@ -170,6 +178,7 @@ footer {
     }
     nav {
     display: flex;
+    position: static;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -178,6 +187,10 @@ footer {
     .nav--items {
         display: flex;
         flex: 2;
+        position: static;
+        padding-block-start: 0;
+        margin-block-start: 0;
+        box-shadow: none;
         flex-direction: row;
         background-color: transparent;
         justify-content: space-between;
