@@ -243,7 +243,7 @@ nav .nav--headings {
   gap: var(--gap-large);
 }
 nav .nav--headings div::after {
-  content: url(../assets/images/icon-arrow-light.svg);
+  content: url(../assets/images/icon-arrow-dark.svg);
   display: inline-block;
   width: auto;
   margin-left: 8px;
