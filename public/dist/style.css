@@ -193,7 +193,7 @@ nav .nav--wrapper {
   justify-content: space-between;
 }
 nav .nav--items {
-  display: flex;
+  display: none;
   flex: 2;
   position: absolute;
   z-index: 2;
@@ -207,6 +207,9 @@ nav .nav--items {
   justify-content: center;
   gap: var(--gap-medium);
   border-radius: 8px;
+}
+nav .nav--items.active {
+  display: flex !important;
 }
 nav .nav--items .topnav--close {
   align-self: flex-end;

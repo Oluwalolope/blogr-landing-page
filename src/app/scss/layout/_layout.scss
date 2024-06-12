@@ -31,7 +31,7 @@ nav {
         justify-content: space-between;
     }
     .nav--items {
-        display: flex;
+        display: none;
         flex: 2;
         position: absolute;
         z-index: 2;
@@ -46,6 +46,9 @@ nav {
         gap: var(--gap-medium);
         border-radius: 8px;
         
+        &.active{
+            display: flex !important;
+        }
         .topnav--close {
             align-self: flex-end;
             margin-block-start: var(--gap-small);
