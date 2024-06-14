@@ -87,7 +87,7 @@ nav {
         align-items: center;
         gap: var(--gap-large);
 
-        div::after {
+        a::after {
             content: url(../assets/images/icon-arrow-dark.svg);
             display: inline-block;
             width: auto;
@@ -226,7 +226,7 @@ footer {
         flex-direction: row;
         gap: var(--gap-large);
 
-        div::after {
+        a::after {
             content: url(../assets/images/icon-arrow-light.svg);
             display: inline-block;
             width: auto;
