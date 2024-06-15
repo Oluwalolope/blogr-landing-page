@@ -24,7 +24,7 @@
 }
 
 navbutton {
-    background-color: lawngreen;
+    // background-color: lawngreen;
     padding: 11px 25px;
     width: 100px;
     text-align: center;
@@ -44,9 +44,10 @@ navbutton {
 }
 
 .dropdown-box .navbutton {
-    background-color: aquamarine;
+    color: var(--clr-dark-blue);
+    background-color: var(--clr-white);
 }
 .dropdown-box .navbutton:hover {
-    background-color: purple;
+    color: var(--clr-dark-blue);
     transition-duration: 0.5s;
 }

@@ -226,11 +226,37 @@ footer {
         flex-direction: row;
         gap: var(--gap-large);
 
-        a::after {
-            content: url(../assets/images/icon-arrow-light.svg);
-            display: inline-block;
-            width: auto;
-            margin-left: 8px;
+        .navbutton a {
+
+            &:hover {
+                text-decoration: none !important;
+            }
+            &::after {
+                content: url(../assets/images/icon-arrow-light.svg);
+                display: inline-block;
+                width: auto;
+                margin-left: 8px;
+            }
+        }
+        .dropdown-box {
+            .navbutton {
+                box-sizing: border-box;
+                padding: calc( var(--gap-small) * 0.5) var(--gap-small);
+
+                &:first-child {
+                    border-top-left-radius: var(--br-cta);
+                    border-top-right-radius: var(--br-cta);
+                }
+                &:last-child {
+                    border-bottom-left-radius: var(--br-cta);
+                    border-bottom-right-radius: var(--br-cta);
+                }
+
+
+                a::after {
+                    content: "";
+                }
+            }
         }
     }
 }

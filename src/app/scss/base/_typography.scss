@@ -59,8 +59,8 @@ main{
     font-size: var(--fs-p);
     color: var(--clr-dark-blue);
     
-    div{
-        &:hover {
+    .navbutton {
+        a:hover {
             transition: var(--transition);
             cursor: pointer;
             text-decoration: underline;
@@ -82,6 +82,14 @@ a {
     font-weight: var(--fw-body-medium);
     text-decoration: none;
     color: var(--clr-white);
+}
+.dropdown-box .navbutton a{
+    color: var(--clr-dark-blue);
+
+    &:hover {
+        text-decoration: none;
+        font-weight: var(--fw-body-heavy);
+    }
 }
 footer {
     color: var(--clr-grayish-blue);

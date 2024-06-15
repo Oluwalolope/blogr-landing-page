@@ -94,7 +94,7 @@ main .herobox--2 h2, main .herobox--2 p {
   font-size: var(--fs-p);
   color: var(--clr-dark-blue);
 }
-.nav--headings div:hover {
+.nav--headings .navbutton a:hover {
   transition: var(--transition);
   cursor: pointer;
   text-decoration: underline;
@@ -112,6 +112,14 @@ a {
   font-weight: var(--fw-body-medium);
   text-decoration: none;
   color: var(--clr-white);
+}
+
+.dropdown-box .navbutton a {
+  color: var(--clr-dark-blue);
+}
+.dropdown-box .navbutton a:hover {
+  text-decoration: none;
+  font-weight: var(--fw-body-heavy);
 }
 
 footer {
@@ -365,11 +373,29 @@ footer .attribution {
     flex-direction: row;
     gap: var(--gap-large);
   }
-  nav .nav--headings a::after {
+  nav .nav--headings .navbutton a:hover {
+    text-decoration: none !important;
+  }
+  nav .nav--headings .navbutton a::after {
     content: url(../assets/images/icon-arrow-light.svg);
     display: inline-block;
     width: auto;
     margin-left: 8px;
+  }
+  nav .nav--headings .dropdown-box .navbutton {
+    box-sizing: border-box;
+    padding: calc(var(--gap-small) * 0.5) var(--gap-small);
+  }
+  nav .nav--headings .dropdown-box .navbutton:first-child {
+    border-top-left-radius: var(--br-cta);
+    border-top-right-radius: var(--br-cta);
+  }
+  nav .nav--headings .dropdown-box .navbutton:last-child {
+    border-bottom-left-radius: var(--br-cta);
+    border-bottom-right-radius: var(--br-cta);
+  }
+  nav .nav--headings .dropdown-box .navbutton a::after {
+    content: "";
   }
   main {
     overflow: hidden;
@@ -488,7 +514,6 @@ footer .attribution {
 }
 
 navbutton {
-  background-color: lawngreen;
   padding: 11px 25px;
   width: 100px;
   text-align: center;
@@ -510,10 +535,11 @@ navbutton {
 }
 
 .dropdown-box .navbutton {
-  background-color: aquamarine;
+  color: var(--clr-dark-blue);
+  background-color: var(--clr-white);
 }
 
 .dropdown-box .navbutton:hover {
-  background-color: purple;
+  color: var(--clr-dark-blue);
   transition-duration: 0.5s;
 }
