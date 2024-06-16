@@ -1,5 +1,6 @@
 const menuBtn = document.querySelector('.topnav--toggle') as HTMLButtonElement;
 const navMenu = document.querySelector('.nav--items') as HTMLDivElement;
+const dropDowns = document.querySelectorAll('.dropdown');
 
 menuBtn.addEventListener('click', (e) => {
   e.stopPropagation();
@@ -13,4 +14,11 @@ menuBtn.addEventListener('click', (e) => {
   } else {
     btnIcon.setAttribute('src', './assets/images/icon-hamburger.svg');
   }
+});
+
+dropDowns.forEach(dropDown => {
+  dropDown.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropDown.classList.toggle('open');
+  });
 });

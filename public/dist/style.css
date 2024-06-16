@@ -27,6 +27,7 @@
   --gap-large: 2rem;
   --gap-v-large: 4rem;
   --br-cta: 18px;
+  --br-popups: 8px;
   --br-section-mobile: 20% 15%;
   --br-section-desktop: 5% 15%;
   --transition: ease-in .1s;
@@ -381,18 +382,19 @@ footer .attribution {
     display: inline-block;
     width: auto;
     margin-left: 8px;
+    transform: rotateZ(0);
   }
   nav .nav--headings .dropdown-box .navbutton {
     box-sizing: border-box;
     padding: calc(var(--gap-small) * 0.5) var(--gap-small);
   }
   nav .nav--headings .dropdown-box .navbutton:first-child {
-    border-top-left-radius: var(--br-cta);
-    border-top-right-radius: var(--br-cta);
+    border-top-left-radius: var(--br-popups);
+    border-top-right-radius: var(--br-popups);
   }
   nav .nav--headings .dropdown-box .navbutton:last-child {
-    border-bottom-left-radius: var(--br-cta);
-    border-bottom-right-radius: var(--br-cta);
+    border-bottom-left-radius: var(--br-popups);
+    border-bottom-right-radius: var(--br-popups);
   }
   nav .nav--headings .dropdown-box .navbutton a::after {
     content: "";
@@ -529,8 +531,11 @@ navbutton {
   margin-left: -27px;
 }
 
-/* This turns the drop down on during hover */
-.navbutton:hover .dropdown-box {
+/* This turns the drop down on during clicks */
+.navbutton.open a::after {
+  transform: rotateZ(90Deg);
+}
+.navbutton.open .dropdown-box {
   display: block;
 }
 

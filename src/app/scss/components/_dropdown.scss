@@ -38,11 +38,17 @@ navbutton {
     padding-top: 20px;
     margin-left: -27px;
 }
-/* This turns the drop down on during hover */
-.navbutton:hover .dropdown-box {
-    display: block;
+/* This turns the drop down on during clicks */
+.navbutton.open {
+    a {
+        &::after {
+            transform: rotateZ(90Deg);
+        }
+    }
+    .dropdown-box {
+        display: block;
+    }
 }
-
 .dropdown-box .navbutton {
     color: var(--clr-dark-blue);
     background-color: var(--clr-white);

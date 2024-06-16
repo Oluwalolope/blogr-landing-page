@@ -236,6 +236,7 @@ footer {
                 display: inline-block;
                 width: auto;
                 margin-left: 8px;
+                transform: rotateZ(0);
             }
         }
         .dropdown-box {
@@ -244,12 +245,12 @@ footer {
                 padding: calc( var(--gap-small) * 0.5) var(--gap-small);
 
                 &:first-child {
-                    border-top-left-radius: var(--br-cta);
-                    border-top-right-radius: var(--br-cta);
+                    border-top-left-radius: var(--br-popups);
+                    border-top-right-radius: var(--br-popups);
                 }
                 &:last-child {
-                    border-bottom-left-radius: var(--br-cta);
-                    border-bottom-right-radius: var(--br-cta);
+                    border-bottom-left-radius: var(--br-popups);
+                    border-bottom-right-radius: var(--br-popups);
                 }
 
 
