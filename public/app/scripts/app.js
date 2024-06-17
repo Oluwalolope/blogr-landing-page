@@ -3,7 +3,7 @@ const menuBtn = document.querySelector('.topnav--toggle');
 const navMenu = document.querySelector('.nav--items');
 const dropDowns = document.querySelectorAll('.dropdown');
 menuBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
+    e.stopPropagation(); //Prevent the click from bubbling up
     navMenu.classList.toggle('active');
     let btnIcon = menuBtn.querySelector('img');
     if (navMenu.classList.contains('active')) {

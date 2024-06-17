@@ -83,6 +83,11 @@ a {
     text-decoration: none;
     color: var(--clr-white);
 }
+.navbutton {
+    a {
+        color: var(--clr-dark-blue);
+    }
+}
 .dropdown-box .navbutton a{
     color: var(--clr-dark-blue);
 
@@ -132,6 +137,11 @@ footer {
         p {
         text-align: center;
         }
+    }
+    .navbutton {
+    a {
+        color: var(--clr-white);
+    }
     }
     .nav--headings {
         color: var(--clr-white);

@@ -1,35 +1,11 @@
-.dropdown .trigger {
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
-    position: relative;
-    cursor: pointer;
-}
-.dropdown .trigger::after {
-    content: '>';
-    display: inline-block;
-    position: absolute;
-    right: 15px;
-    transform: rotate(90deg) scale(0.5, 1);
-    font-weight: bold;
-    transition: transform 0.3s;
-}
-.dropdown .trigger.active::after {
-    transform: rotate(-90deg) scale(0.5, 1);
-}
-.dropdown .content {
-    display: none;
-}
-.dropdown .content.active {
-    display: block;
-}
+.dropdown {
 
-navbutton {
-    // background-color: lawngreen;
-    padding: 11px 25px;
-    width: 100px;
-    text-align: center;
-    display: inline-block;
-    position: relative;
+    &.open {
+        text-decoration: underline;
+    }
+    &:hover {
+        text-decoration: underline;
+    }
 }
 /* This turns the dropdown-box of when not being used */
 .dropdown-box {
@@ -42,7 +18,8 @@ navbutton {
 .navbutton.open {
     a {
         &::after {
-            transform: rotateZ(90Deg);
+            transition: var(--transition);
+            transform: rotateZ(180Deg) !important;
         }
     }
     .dropdown-box {

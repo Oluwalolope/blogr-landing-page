@@ -30,7 +30,7 @@
   --br-popups: 8px;
   --br-section-mobile: 20% 15%;
   --br-section-desktop: 5% 15%;
-  --transition: ease-in .1s;
+  --transition: ease-in-out .1s;
 }
 
 * {
@@ -115,6 +115,10 @@ a {
   color: var(--clr-white);
 }
 
+.navbutton a {
+  color: var(--clr-dark-blue);
+}
+
 .dropdown-box .navbutton a {
   color: var(--clr-dark-blue);
 }
@@ -149,6 +153,9 @@ footer .attribution a:hover {
 @media (min-width: 768px) {
   header p {
     text-align: center;
+  }
+  .navbutton a {
+    color: var(--clr-white);
   }
   .nav--headings {
     color: var(--clr-white);
@@ -486,41 +493,11 @@ footer .attribution {
     display: none;
   }
 }
-.dropdown .trigger {
-  border-bottom: 1px solid #ddd;
-  padding: 10px;
-  position: relative;
-  cursor: pointer;
+.dropdown.open {
+  text-decoration: underline;
 }
-
-.dropdown .trigger::after {
-  content: ">";
-  display: inline-block;
-  position: absolute;
-  right: 15px;
-  transform: rotate(90deg) scale(0.5, 1);
-  font-weight: bold;
-  transition: transform 0.3s;
-}
-
-.dropdown .trigger.active::after {
-  transform: rotate(-90deg) scale(0.5, 1);
-}
-
-.dropdown .content {
-  display: none;
-}
-
-.dropdown .content.active {
-  display: block;
-}
-
-navbutton {
-  padding: 11px 25px;
-  width: 100px;
-  text-align: center;
-  display: inline-block;
-  position: relative;
+.dropdown:hover {
+  text-decoration: underline;
 }
 
 /* This turns the dropdown-box of when not being used */
@@ -533,7 +510,8 @@ navbutton {
 
 /* This turns the drop down on during clicks */
 .navbutton.open a::after {
-  transform: rotateZ(90Deg);
+  transition: var(--transition);
+  transform: rotateZ(180Deg) !important;
 }
 .navbutton.open .dropdown-box {
   display: block;

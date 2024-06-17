@@ -3,7 +3,7 @@ const navMenu = document.querySelector('.nav--items') as HTMLDivElement;
 const dropDowns = document.querySelectorAll('.dropdown');
 
 menuBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
+  e.stopPropagation();//Prevent the click from bubbling up
 
   navMenu.classList.toggle('active');
 
