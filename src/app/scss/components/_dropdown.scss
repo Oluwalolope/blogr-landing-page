@@ -10,9 +10,7 @@
 /* This turns the dropdown-box of when not being used */
 .dropdown-box {
     display: none;
-    position: absolute;
     padding-top: 20px;
-    margin-left: -27px;
 }
 /* This turns the drop down on during clicks */
 .navbutton.open {
@@ -28,9 +26,41 @@
 }
 .dropdown-box .navbutton {
     color: var(--clr-dark-blue);
-    background-color: var(--clr-white);
+    background-color: var(--clr-light-grayish-blue);
+    padding: 10px 30px;
+
+
+    &:first-child {
+        border-top-left-radius: var(--br-popups);
+        border-top-right-radius: var(--br-popups);
+    }
+    &:last-child {
+        border-bottom-left-radius: var(--br-popups);
+        border-bottom-right-radius: var(--br-popups);
+    }
+
+    a {
+
+        &::after {
+            content: '';
+        }
+    }
 }
 .dropdown-box .navbutton:hover {
     color: var(--clr-dark-blue);
     transition-duration: 0.5s;
+}
+
+@media (min-width: 768px){
+    /* This turns the dropdown-box of when not being used */
+    .dropdown-box {
+        display: none;
+        position: absolute;
+        padding-top: 20px;
+        margin-left: -27px;
+    }
+    .dropdown-box .navbutton {
+        color: var(--clr-dark-blue);
+        background-color: var(--clr-white);
+    }
 }

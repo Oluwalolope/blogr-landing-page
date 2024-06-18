@@ -3,7 +3,8 @@
   --clr-light-red: hsl(356, 100%, 66%);
   --clr-very-light-red: hsl(355, 100%, 74%);
   --clr-dark-blue: hsl(208, 49%, 24%);
-  --clr-grayish-blue: hsl(240, 2%, 79%);
+  --clr-grayish-blue: hsla(240, 3%, 79%, 0.5);
+  --clr-light-grayish-blue: hsl(240, 2%, 79%);
   --clr-very-dark-grayish-blue: hsl(207, 13%, 34%);
   --gradient-1: linear-gradient( 90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%) );
   --gradient-2: linear-gradient( 90deg, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
@@ -503,9 +504,7 @@ footer .attribution {
 /* This turns the dropdown-box of when not being used */
 .dropdown-box {
   display: none;
-  position: absolute;
   padding-top: 20px;
-  margin-left: -27px;
 }
 
 /* This turns the drop down on during clicks */
@@ -519,10 +518,36 @@ footer .attribution {
 
 .dropdown-box .navbutton {
   color: var(--clr-dark-blue);
-  background-color: var(--clr-white);
+  background-color: var(--clr-light-grayish-blue);
+  padding: 10px 30px;
+}
+.dropdown-box .navbutton:first-child {
+  border-top-left-radius: var(--br-popups);
+  border-top-right-radius: var(--br-popups);
+}
+.dropdown-box .navbutton:last-child {
+  border-bottom-left-radius: var(--br-popups);
+  border-bottom-right-radius: var(--br-popups);
+}
+.dropdown-box .navbutton a::after {
+  content: "";
 }
 
 .dropdown-box .navbutton:hover {
   color: var(--clr-dark-blue);
   transition-duration: 0.5s;
+}
+
+@media (min-width: 768px) {
+  /* This turns the dropdown-box of when not being used */
+  .dropdown-box {
+    display: none;
+    position: absolute;
+    padding-top: 20px;
+    margin-left: -27px;
+  }
+  .dropdown-box .navbutton {
+    color: var(--clr-dark-blue);
+    background-color: var(--clr-white);
+  }
 }
